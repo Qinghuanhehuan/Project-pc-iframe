@@ -1,0 +1,98 @@
+//标题，功能区分
+.font-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-black;
+    line-height: 1.5;
+}
+.font-subTitle{
+    font-size: 14px;
+    color: $color-black;
+    line-height: 1.5;
+}
+.font-text{
+    font-size: 12px;
+    color: $color-lightBlack;
+    line-height: 1.5;
+}
+.font-subText-grey{
+    font-size: 12px;
+    color: $color-grey;
+    line-height: 1.5;
+}
+.font-subText-lightGrey{
+    font-size: 12px;
+    color: $color-lightGrey;
+    line-height: 1.5;
+}
+
+
+//文字大小
+.font-16{
+    font-size:16px !important;
+    line-height: 1.5;
+}
+.font-14{
+    font-size: 14px !important;
+    line-height: 1.5;
+}
+.font-12{
+    font-size: 12px !important;
+    line-height: 1.5;
+}
+
+//颜色区分
+.font-black{
+    color: $color-black;
+}
+.font-grey{
+    color: $color-grey;
+}
+.font-lightGrey{
+    color: $color-lightGrey;
+}
+//默认颜色
+.font-green{
+    color:$color-green;
+}
+//提示，带数字
+.font-orange{
+    color:$color-orange;
+}
+//注意，警告
+.font-red{
+    color:$color-red;
+}
+//链接
+.font-blue{
+    color: $color-blue;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}

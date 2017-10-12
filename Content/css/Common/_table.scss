@@ -1,0 +1,53 @@
+/* ==========================================================================
+ 表格
+ ========================================================================== */
+
+/**
+* 合并单元格边框
+*/
+
+        
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    
+}
+
+table thead{
+    white-space:nowrap;
+    font-weight: bold;
+}
+  
+table th,
+table td {
+    border: 1px solid #d8d8d8;
+    white-space: nowrap;
+    padding: 6px 15px;
+    a{
+        margin:0px 3px;
+    }
+}
+ 
+table th {
+    border-bottom-color: #ccc;
+    background:#f9f9f9;
+}
+  
+ 
+table tr:nth-child(even){
+    background:#f9f9f9;
+}
+table tr:hover td{
+    background:#fdfff0;
+}
+
+
+//  table下面的说明文字
+.table-des{
+    font-size: 10px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}

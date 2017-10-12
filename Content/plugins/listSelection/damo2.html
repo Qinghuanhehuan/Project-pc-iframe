@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>jquery 列表选择</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/list-style.css">
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/list-script.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $('#selectTitle').initList();
+    })
+    </script>
+</head>
+
+<body>
+    <div id="selectTitle" class="list-select">
+        <div class="list-body">
+            <div class="item-box left-box">
+                <!-- 左边框初始化待选项 -->
+                <span class="item" data-id="xigua">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="pingguo">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="xiangjiao">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="boluo">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="caomei">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="yali">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="mitao">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="sangguo">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="yangmei">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+                <span class="item" data-id="putao">
+                    <ul>
+                        <li>名称：</li>
+                        <li>苹果</li>
+                        <li>价格：</li>
+                        <li>￥88</li>
+                    </ul>
+                </span>
+            </div>
+            <div class="center-box">
+                <button class="add-one" title="添加选中项"></button>
+                <button class="add-all" title="添加全部"></button>
+                <button class="remove-one" title="移除选中项"></button>
+                <button class="remove-all" title="移除全部"></button>
+            </div>
+            <div class="item-box right-box">
+                <!-- 右边框存放已选项 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

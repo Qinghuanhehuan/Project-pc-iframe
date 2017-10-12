@@ -1,0 +1,127 @@
+<!doctype html5>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>测试页</title>
+    <meta name="description" content="Dashboard"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+	<link rel="stylesheet" href="Content/plugins/layui/css/layui.css">
+	<link rel="stylesheet" href="Content/css/common.css"/>  
+	
+</head>
+<body>
+    <div class="breadcrumbs-box">
+        <ul class="breadcrumb">
+            <li>
+                <i class="fa fa-home"></i>
+                <a>当前位置：</a>
+            </li>
+            <li> 
+                <a href="1.1.html">1.0房源视频管理<span class="margin-left-5">&gt;</span></a>
+            </li>
+            <li class="margin-left-10"> 
+                <a href="1.1.html">1.1视频添加<span class="margin-left-5">&gt;</span></a>
+            </li>
+            <li class="margin-left-10"><a href="1.1.1.html" class="active">1.1.1详情页1</a></li>
+        </ul>
+    </div>
+    <div class="right-container padding10">
+        <div class="form-container container-12">
+	    	<div class="form-item">
+	    		<span class="title">抢单回收时限：</span>
+	    		<input type="text" value="15" placeholder="请输入"/>
+	    		<span class="unit">小时</span>
+	    		<span class="des">说明：房管员抢单之后x小时之后未发起带看，该客户线索自动，其他房管员可以继续抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">带看回收时限：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">小时</span>
+	    		<span class="des">说明：当房管员发起带看x天未签约，改客户线索自动释放，其他房管员可继续抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">客户线索自动放弃时限：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">个数</span>
+	    		<span class="des">说明：根据房管员抢单记录，超过x单还未成交的客户线索不能继续抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">反馈回收时限：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">分钟</span>
+	    		<span class="des">说明：根据房管员抢单记录，超过x单还未成交的客户线索不能继续抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">线索竞拍时限：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">分钟</span>
+	    		<span class="des">说明：x分钟竞拍，价高者得。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">及时反馈返还积分：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">%</span>
+	    		<span class="des">说明：房管员在反馈回收时限内的反馈及反馈签约，返还购买线索积分的x百分比。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">催单积分配置：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="unit">分钟</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title">积分扣除：</span>
+	    		<input type="text" placeholder="请输入"/>
+	    		<span class="des">说明：抢单后x小时催单，催单一次扣除积分一次。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title vm">抢单未反馈是否可以竞拍：</span>
+	    		<label class="radio">是<input type="radio" name="radio-auction" id="radio-auction-yes"/><i></i></label>
+	    		<label class="radio margin-left-10">否<input type="radio" name="radio-auction" id="radio-auction-no"/><i></i></label>
+	    		<span class="des">说明：客户线索默认第一次进来按照推荐版块，只有归属的分公司才能看到，第一次释放之后全公司都能抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title vm">转化率积分配置：</span>
+	    		<label class="radio">最近15天<input type="radio" name="radio-days" id="radio-days-15"/><i></i></label>
+	    		<label class="radio margin-left-10">最近30天<input type="radio" name="radio-days" id="radio-days-30"/><i></i></label>
+	    		<label class="radio margin-left-10">最近90天<input type="radio" name="radio-days" id="radio-days-90"/><i></i></label>	    	
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title"></span>
+		    	<span class="inner-title">转化率≤</span>
+		    	<input type="text" placeholder="请输入" class="inner-input"/>
+		    	<span class="inner-unit">%</span>   
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title"></span>
+		    	<span class="inner-title">起拍积分：</span>
+		    	<input type="text" placeholder="请输入" class="inner-input"/>
+		    	<span class="inner-unit">积分</span> 		
+		    	<span class="des">说明：最近抢单x天的转化率低的起拍积分按照限制出价。</span>
+    		</div>
+	    	<div class="form-item">
+	    		<span class="title vm">区域优先抢单：</span>
+	    		<label class="radio">是<input type="radio" id="radio-region-yes" name="radio-region"/><i></i></label>
+	    		<label class="radio margin-left-10">否<input type="radio" id="radio-region-no" name="radio-region"/><i></i></label>
+	    		<span class="des">说明：客户线索默认第一次进来按照推荐版块，只有归属的分公司才能看到，第一次释放之后全公司都能抢单。</span>
+	    	</div>
+	    	<div class="form-item">
+	    		<span class="title"></span>
+	    		<button class="btn btn-primary margin-left-0">修改</button>
+	    	</div>
+    	</div>
+    </div>
+    
+    
+    
+    <script src="Content/js/jquery-2.0.3.min.js"></script> 
+    <script src="Content/plugins/layui/layui.js"></script>
+    <script src="Content/js/common.js"></script>
+	<script>
+		
+		
+	</script>    
+</body>
+    
+</html>

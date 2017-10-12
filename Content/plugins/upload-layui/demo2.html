@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<title>layer-无限弹框</title>
+  	<link rel="stylesheet" href="../../css/common.css"/>
+  	<link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  	<script src="../layui/layui.js"></script>
+  	<style>
+  		img{
+  			width: 100px;
+  		}
+  	</style>
+</head>
+<body>
+		<button type="button" class="layui-btn" id="test1"><i class="layui-icon"></i>上传word文件</button>
+		<button type="button" class="layui-btn" id="test2"><i class="layui-icon"></i>上传excel文件</button>
+		<button type="button" class="layui-btn layui-btn-primary" id="test3"><i class="layui-icon"></i>只允许压缩文件</button>
+		<button type="button" class="layui-btn" id="test4"><i class="layui-icon"></i>上传视频</button>
+		<button type="button" class="layui-btn" id="test5"><i class="layui-icon"></i>上传音频</button> 
+		<div style="margin-top: 10px;">
+<script>
+
+layui.use('upload', function(){
+  	var $ = layui.jquery,upload = layui.upload;
+  
+  	//指定允许上传的文件类型
+	  upload.render({
+	    	elem: '#test1',
+	    	url: '/upload/',
+		    accept: 'file', //普通文件
+	    	exts: 'doc|docx|dot|docm|dotx|dotm|xml', //word文件后缀名
+	    	done: function(res){
+	      	console.log(res)
+	    	}
+	  });
+	  upload.render({
+	    	elem: '#test2',
+	    	url: '/upload/',
+		    accept: 'file', 
+	    	exts: 'xlsx|xlsm|xltx|xltm|xlsb|xlam|xls|xla|xlt', //excel文件后缀名
+	    	done: function(res){
+	      	console.log(res)
+	    	}
+	  });
+	  upload.render({ 
+		    elem: '#test3',
+		    url: '/upload/',
+		    accept: 'file', //普通文件
+		    exts: 'zip|rar|7z', //只允许上传压缩文件
+		    done: function(res){
+		      console.log(res)
+		    }
+	  });
+	  upload.render({
+		    elem: '#test4',
+		    url: '/upload/',
+		    accept: 'video', //视频
+		    done: function(res){
+		      console.log(res)
+		    }
+	  });
+	  upload.render({
+		    elem: '#test5',
+		    url: '/upload/',
+		    accept: 'audio', //音频
+		    done: function(res){
+		      console.log(res)
+		    }
+	  });
+});
+</script>
+</body>
+</html>

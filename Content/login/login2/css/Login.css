@@ -1,0 +1,122 @@
+body, html {
+  padding: 0;
+  margin: 0; }
+
+input, button {
+  outline: none; }
+
+div, p, h2 {
+  margin: 0; }
+
+.login-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.content-login-main {
+  background: url(../img/bg.png) no-repeat center;
+  width: 1000px;
+  height: 521px; }
+  .content-login-main .container-head {
+    display: flex;
+    width: 1000px;
+    height: 521px; }
+    .content-login-main .container-head .checkInfo {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 3px;
+      margin-top: -5px;
+      height: 15px; }
+    .content-login-main .container-head .panel-logo {
+      flex: 0 0 38.5%;
+      padding-top: 222px;
+      height: 251px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 35px;
+      text-align: center; }
+      .content-login-main .container-head .panel-logo .bd {
+        margin-top: 16px;
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 0px;
+        font-weight: normal; }
+      .content-login-main .container-head .panel-logo .ft {
+        color: #999;
+        font-size: 14px;
+        margin: 0;
+        margin-top: 7px; }
+    .content-login-main .container-head .panel-input {
+      flex: 0 0 53%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 140px;
+      margin-left: 48px; }
+      .content-login-main .container-head .panel-input .hd {
+        color: #ef8c23;
+        font-size: 14px;
+        margin-bottom: 14px; }
+      .content-login-main .container-head .panel-input .bd .h,
+      .content-login-main .container-head .panel-input .bd .b,
+      .content-login-main .container-head .panel-input .bd .f {
+        border: 1px solid #d8d8d8;
+        border-radius: 5px;
+        height: 40px;
+        line-height: 40px;
+        width: 376px;
+        background: #f9f9f9;
+        margin-bottom: 14px;
+        padding-left: 36px; }
+      .content-login-main .container-head .panel-input .bd .h {
+        background: url(../img/user.png) no-repeat 12px center; }
+      .content-login-main .container-head .panel-input .bd .b {
+        background: url(../img/pwd.png) no-repeat 12px center; }
+      .content-login-main .container-head .panel-input .bd .f {
+        background: url(../img/testcode.png) no-repeat 12px center;
+        display: flex;
+        align-items: center; }
+        .content-login-main .container-head .panel-input .bd .f .l {
+          border: none;
+          background: none;
+          line-height: 40px;
+          height: 40px;
+          vertical-align: bottom;
+          width: 208px; }
+        .content-login-main .container-head .panel-input .bd .f .c {
+          vertical-align: sub;
+          margin-right: 8px; }
+        .content-login-main .container-head .panel-input .bd .f .r {
+          font-size: 12px;
+          color: #666;
+          cursor: pointer; }
+    .content-login-main .container-head .ft {
+      margin-top: 6px; }
+      .content-login-main .container-head .ft .h {
+        font-size: 12px;
+        color: #666;
+        margin: 0; }
+      .content-login-main .container-head .ft .f {
+        border: 1px solid #00ab84;
+        border-radius: 5px;
+        height: 40px;
+        line-height: 40px;
+        width: 376px;
+        background: #00ab84;
+        margin-bottom: 14px;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold; }
+  .content-login-main .container-foot {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    margin-top: -48px; }
+
+/*# sourceMappingURL=Login.css.map */

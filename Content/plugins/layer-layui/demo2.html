@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layer-基础提示框1</title>
+  <link rel="stylesheet" href="../../css/common.css"/>
+  <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  <script src="../../js/jquery-2.0.3.min.js"></script>
+  <script src="../layui/layui.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+<div class="btnBox" style="margin: 100px auto auto 100px;">
+  	<button data-method="set1" class="btn btn-default">提示层</button>
+  	<button data-method="set2" data-type="right" class="btn btn-default btn-tips-right">tips层-右默认</button>
+  	<button data-method="set2" data-type="left" class="btn btn-default btn-tips-left">tips层-左</button>
+  	<button data-method="set2" data-type="top" class="btn btn-default btn-tips-top">tips层-上</button>
+  	<button data-method="set2" data-type="bottom" class="btn btn-default btn-tips-bottom">tips层-下</button>
+</div>
+
+<script>
+
+layui.use('layer', function(){ 
+  	var $ = layui.jquery, layer = layui.layer; 
+  
+  	//触发事件
+  	var active = {
+    	set1: function(){
+	      	var that = this; 
+		    	layer.msg('玩命提示中');
+	    },
+	    set2:function(othis){
+	    		var type = othis.data('type'),text = othis.text();
+	      
+	      	switch(type){
+	      		case 'right':{
+	      			layer.tips('默认右', '.btn-tips-right');
+	      			break;
+	      		}
+	      		case 'left':{
+	      			layer.tips('左', '.btn-tips-left', {
+					  	tips: [4, '#78BA32'] //可配置背景颜色
+					});
+	      			break;
+	      		}
+	      		case 'top':{
+	      			layer.tips('上', '.btn-tips-top', {
+				  		tips: [1, '#0FA6D8'] 
+					});
+	      			break;
+	      		}
+	      		case 'bottom':{
+	      			layer.tips('下', '.btn-tips-bottom', {
+					  	tips: 3
+					});
+	      			break;
+	      		}
+	      	}
+	    }
+	};
+
+	$('.btnBox button').on('click', function(){
+		var othis = $(this), method = othis.data('method');
+		active[method] ? active[method].call(this, othis) : '';
+  	});
+  
+});
+</script>
+</body>
+</html>

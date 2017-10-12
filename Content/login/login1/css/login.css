@@ -1,0 +1,113 @@
+body, html {
+  padding: 0;
+  margin: 0; }
+
+input, button {
+  outline: none; }
+
+div, p, h2 {
+  margin: 0; }
+
+.login-wrap {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #333; }
+  .login-wrap .content {
+    width: 520px;
+    height: 456px;
+    border-radius: 5px;
+    padding: 36px;
+    background: #fff;
+    box-shadow: 0px 0px 20px #666;
+    box-sizing: border-box; }
+    .login-wrap .content .head {
+      text-align: center;
+      color: #333; }
+      .login-wrap .content .head div {
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 18px;
+        font-weight: normal; }
+        .login-wrap .content .head div::before {
+          content: "";
+          width: 0px;
+          color: #999;
+          border-top: 1px solid #ccc;
+          padding: 0px 20px;
+          position: relative;
+          top: 14px;
+          margin-right: 15px; }
+        .login-wrap .content .head div::after {
+          content: "";
+          width: 0px;
+          color: #999;
+          border-top: 1px solid #ccc;
+          padding: 0px 20px;
+          position: relative;
+          top: 14px;
+          margin-left: 15px; }
+      .login-wrap .content .head p {
+        font-size: 14px;
+        color: #999;
+        margin-top: 6px; }
+    .login-wrap .content .container {
+      margin: 20px 0px 0px;
+      font-size: 14px;
+      box-sizing: border-box; }
+      .login-wrap .content .container .checkInfo {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 3px;
+        margin-top: -10px;
+        height: 17px; }
+      .login-wrap .content .container .form-item {
+        margin-bottom: 15px;
+        height: 40px; }
+        .login-wrap .content .container .form-item input {
+          width: 100%;
+          padding: 10px 5px 10px 40px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background: url(../img/user.png) no-repeat 13px 50%;
+          box-sizing: border-box; }
+          .login-wrap .content .container .form-item input.pwd {
+            background-image: url(../img/pwd.png); }
+          .login-wrap .content .container .form-item input.testcode {
+            width: 287px;
+            background-image: url(../img/testcode.png); }
+        .login-wrap .content .container .form-item .rew-code img {
+          width: 110px;
+          height: 40px;
+          vertical-align: middle;
+          margin-left: 30px; }
+      .login-wrap .content .container .it-help {
+        height: 20px;
+        color: #999;
+        font-size: 14px;
+        overflow: hidden; }
+        .login-wrap .content .container .it-help input {
+          position: relative;
+          top: 2px;
+          margin-right: 8px; }
+        .login-wrap .content .container .it-help span {
+          float: right; }
+    .login-wrap .content .foot button {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      background: #00AB84;
+      margin-top: 18px;
+      font-weight: bold; }
+
+/*# sourceMappingURL=login.css.map */

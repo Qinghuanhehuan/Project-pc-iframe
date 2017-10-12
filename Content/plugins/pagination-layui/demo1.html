@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>显示完整功能</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+  <script src="../layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+ 
+<div id="demo1"></div>
+
+<script>
+layui.use(['laypage', 'layer'], function(){
+  	var laypage = layui.laypage,layer = layui.layer;
+  	//完整功能
+  	laypage.render({
+	    elem: 'demo1',
+	    count: 100,
+	    layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+	    jump: function(obj){
+	      console.log(obj)
+	    }
+  	});
+});
+</script>
+
+</body>
+</html>

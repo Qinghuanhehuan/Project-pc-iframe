@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5、范围（年月）</title>
+  	<link rel="stylesheet" href="../../css/common.css"/>
+  	<link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  	<script src="../layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+     <div class="select-item"> 
+        <span>2.2.8抢单时间：</span>
+        <input type="text" class="laydate range-time" placeholder="抢单时间" id="time"/>
+    </div>
+          
+    <script>
+    	//日期选择
+    	layui.use('laydate', function(){
+  			var laydate = layui.laydate;
+	        laydate.render({
+	            elem: '#time', 
+	            type: 'month',
+	  			range: true
+	        });
+	    })
+    	laydate.render({
+        elem: '#time', 
+        type: 'month',
+				range: true
+    	});
+    </script>
+</body>
+</html>

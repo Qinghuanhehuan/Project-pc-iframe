@@ -1,0 +1,555 @@
+/*根据不同屏宽，设置em 大小 */
+@media screen and (max-width:1920px) and (min-width:1681px) {
+  html{font-size:18px} //1920 1080
+}
+@media screen and (max-width:1680px) and (min-width:1601px) {
+  html{font-size:16px} //1680 1050
+}
+@media screen and (max-width:1600px) and (min-width:1441px) {
+  html{font-size:16px} //1600 900
+}
+@media screen and (max-width:1440px) and (min-width:1367px) {
+  html{font-size:15px} //1440 900
+}
+@media screen and (max-width:1366px) and (min-width:1360px) {
+  html{font-size:14px} //1366 786 1360 768
+}
+
+/* ==========================================================================
+ 有即是无，无即是有
+ ========================================================================== */
+body, dl, dd, /* dt, 默认没边距 */
+ul, ol, /*li, 默认没边距 */
+h1, h2, h3, h4, h5, h6, pre, /* code, 默认没边距 */
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, td, em, div /* th, td 默认 padding:1px */
+{
+  margin:0;
+  padding:0;
+  color: $color-lightBlack;
+  font-style: normal;
+//font-weight: normal;
+  box-sizing: border-box;
+}
+
+/**
+* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+*/
+ul, ol, li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+ 链接
+ ========================================================================== */
+
+/**
+* 去除链接默认的下划线，提高文字可读性
+*/
+a, a:visited {
+  text-decoration: none;
+  color: $color-blue;
+  cursor: pointer;
+}
+
+/**
+* 去掉 IE 10+ 点击链接时的灰色背景
+*/
+a:active {
+  background-color: transparent;
+}
+
+/**
+* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
+*/
+a:active,
+a:hover {
+  outline: 0 none;
+}
+
+/**
+* 统一 Chrome 和 Safari 的焦点框样式
+* Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1
+* Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正
+*
+*/
+a:focus {
+  outline: none;
+}
+
+/* ==========================================================================
+ 字体和基础排版
+ ========================================================================== */
+
+/**
+* 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
+*/
+html {
+  text-size-adjust: 100%; /* 1 */
+  font-size: 62.5%; /* 10/16=62.5% */
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+input,button{
+    outline: none;
+}
+
+body,
+button, /* 1 */
+input, /* 1 */
+select, /* 1 */
+textarea  /* 1 */
+{
+  font-family: 'Microsoft Yahei', '\65B0\5B8B\4F53', '\5B8B\4F53', Verdana;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; /* 5 */
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+* 修正 Safari5 和 Chrome 中没有样式的问题
+*/
+dfn {
+  font-style: italic;
+}
+
+/**
+* 修正 Firefox 和其他浏览器之间的差异
+*/
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+* 网页标记，荧光笔
+* 修正 IE6-11 中没有样式的问题
+*/
+mark {
+  background-color: #D2E5FF;
+  color: #000;
+}
+
+/**
+* 增强所有浏览器中 pre 标签中文本的可读性
+* 1. IE 6-7 不支持 pre-wrap
+* 2. pre 标签应当包含滚溢出
+*/
+pre {
+  white-space: pre;
+  white-space: pre-wrap; /* 1 */
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+/* ==========================================================================
+ 嵌入元素
+ ========================================================================== */
+img {
+  border: 0 none; /* 1 */
+  width: auto\9; /* 2 */
+  height: auto; /* 3 */
+  max-width: 100%; /* 4 */
+  vertical-align: top;/* 5 */
+  -ms-interpolation-mode: bicubic; /* 6 */
+}
+
+
+/* ==========================================================================
+ HTML5 元素
+ ========================================================================== */
+
+/**
+* 修正未定义为「block」的元素
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+* 1. 修正未定义为「inline-block」的元素
+* 2. 修正 Chrome、Firefox、Opera 中 「progress」元素 vertical-align 默认值不一致
+*/
+audio,
+canvas,
+video,
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+* 1.防止现代浏览器将没有「controls」属性的 「audio」元素显示出来
+* 2.去掉 iOS 5 中多余的高度
+*/
+audio:not([controls]) {
+  display: none; /* 1 */
+  height: 0; /* 2 */
+}
+
+/**
+* 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题
+* 在IE、Safari、Firefox 22- 中隐藏「template」元素
+*/
+[hidden], template {
+  display: none;
+}
+
+/**
+* 为可拖动元素添加拖动的光标
+* http://jsbin.com/apavod/1/edit
+*/
+[draggable] {
+  cursor: move;
+}
+
+/**
+* 居中 HTML5 dialog 元素
+*/
+dialog {
+  border: 1px solid;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+/* ==========================================================================
+ 基础工具
+ ========================================================================== */
+
+/* 强制不换行 */
+.nowrap {
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* 连续字符换行 */
+.wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.hide {
+  display: none;
+}
+
+.hideV{
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+}
+.showV{
+  visibility: visible;
+}
+
+/**
+* 文字溢出显示省略号
+*/
+
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left; /* 2 */
+}
+
+/** 隐藏文字
+* 1.text-indent:-999em 存在性能问题：
+*/
+.text-hide {
+  text-indent: 100%; /* 1 */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 浮动
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.clearfix {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.red{
+    color: $color-red;
+}
+.margin-top-0{
+    margin-top:0!important;
+}
+.margin-top-5{
+    margin-top:5px!important;
+}
+.margin-top-10{
+    margin-top:10px!important;
+}
+.margin-top-15{
+    margin-top:15px!important;
+}
+.margin-top-20{
+    margin-top:20px!important;
+}
+.margin-top-25{
+    margin-top:25px!important;
+}
+.margin-top-30{
+    margin-top:30px!important;
+}
+.margin-bottom-0{
+    margin-bottom:0!important;
+}
+.margin-bottom-5{
+    margin-bottom:5px!important;
+}
+.margin-bottom-10{
+    margin-bottom:10px!important;
+}
+.margin-bottom-15{
+    margin-bottom:15px!important;
+}
+.margin-bottom-20{
+    margin-bottom:20px!important;
+}
+.margin-bottom-25{
+    margin-bottom:25px!important;
+}
+.margin-bottom-30{
+    margin-bottom:30px!important;
+}
+.margin-bottom-38{
+    margin-bottom:38px!important;
+}
+.margin-left-0{
+    margin-left:0!important;
+}
+.margin-left-5{
+    margin-left:5px!important;
+}
+.margin-left-10{
+    margin-left:10px!important;
+}
+.margin-left-15{
+    margin-left:15px!important;
+}
+.margin-left-20{
+    margin-left:20px!important;
+}
+.margin-left-25{
+    margin-left:25px!important;
+}
+.margin-left-30{
+    margin-left:30px!important;
+}
+.margin-right-0{
+    margin-right:0!important;
+}
+.margin-right-5{
+    margin-right:5px!important;
+}
+.margin-right-10{
+    margin-right:10px!important;
+}
+.margin-right-15{
+    margin-right:15px!important;
+}
+.margin-right-20{
+    margin-right:20px!important;
+}
+.margin-right-25{
+    margin-right:25px!important;
+}
+.margin-right-30{
+    margin-right:30px!important;
+}
+.padding-top-0{
+    padding-top:0!important;
+}
+.padding-top-5{
+    padding-top:5px!important;
+}
+.padding-top-10{
+    padding-top:10px!important;
+}
+.padding-top-15{
+    padding-top:15px!important;
+}
+.padding-top-20{
+    padding-top:20px!important;
+}
+.padding-top-25{
+    padding-top:25px!important;
+}
+.padding-top-30{
+    padding-top:30px!important;
+}
+.padding-bottom-0{
+    padding-bottom:0!important;
+}
+.padding-bottom-5{
+    padding-bottom:5px!important;
+}
+.padding-bottom-10{
+    padding-bottom:10px!important;
+}
+.padding-bottom-15{
+    padding-bottom:15px!important;
+}
+.padding-bottom-20{
+    padding-bottom:20px!important;
+}
+.padding-bottom-25{
+    padding-bottom:25px!important;
+}
+.padding-bottom-30{
+    padding-bottom:30px!important;
+}
+.padding-left-0{
+    padding-left:0!important;
+}
+.padding-left-5{
+    padding-left:5px!important;
+}
+.padding-left-10{
+    padding-left:10px!important;
+}
+.padding-left-15{
+    padding-left:10px!important;
+}
+.padding-left-20{
+    padding-left:20px!important;
+}
+.padding-left-25{
+    padding-left:25px!important;
+}
+.padding-left-30{
+    padding-left:30px!important;
+}
+.padding-right-0{
+    padding-right:0!important;
+}
+.padding-right-5{
+    padding-right:5px!important;
+}
+.padding-right-10{
+    padding-right:10px!important;
+}
+.padding-right-15{
+    padding-right:15px!important;
+}
+.padding-right-20{
+    padding-right:20px!important;
+}
+.padding-right-25{
+    padding-right:25px!important;
+}
+.padding-right-30{
+    padding-right:30px!important;
+}
+.padding0{
+    padding:0!important;
+}
+.padding5{
+    padding:5px!important;
+}
+.padding10{
+    padding:10px!important;
+}
+.padding15{
+    padding:15px!important;
+}
+.padding20{
+    padding:20px!important;
+}
+.margin0{
+    margin:0!important;
+}
+.margin5{
+    margin:5px!important;
+}
+.margin10{
+    margin:10px!important;
+}
+.margin15{
+    margin:15px!important;
+}
+.margin20{
+    margin:20px!important;
+}
+.no-padding-top{
+    padding-top:0 !important;
+}
+.no-padding-left{
+    padding-left:0 !important;
+}
+.no-padding-right{
+    padding-right:0 !important;
+}
+.no-padding-bottom{
+    padding-bottom:0 !important;
+}
+.no-margin-top{
+    margin-top:0 !important;
+}
+.no-margin-left{
+    margin-left:0 !important;
+}
+.no-margin-right{
+    margin-right:0 !important;
+}
+.no-margin-bottom{
+    margin-bottom:0 !important;
+}
+.link-color-blue{
+    color: #3983c2!important;
+}
+span.require::before{
+    content:"*";
+    color: red;
+}

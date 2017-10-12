@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layer-无限弹框</title>
+  <link rel="stylesheet" href="../../css/common.css"/>
+  <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  <script src="../../js/jquery-2.0.3.min.js"></script>
+  <script src="../layui/layui.js"></script>
+</head>
+<body>
+<div class="btnBox" style="margin: 100px auto auto 100px;">
+  	<button data-method="set1" class="btn btn-default openBtn">无限弹框</button>
+</div>
+
+<div class="layer1 hide" style="text-align: center;">
+	<div class="layer1-content" style="height: 100%;">
+		<button class="btn btn-default" onClick="btnOpenLayer2()">继续弹出</button>
+		<button class="btn btn-cancel" onClick="btnCloseAll()">全部关闭</button>
+		<p>layer1</p>
+	</div>
+</div>
+
+<div class="layer2 hide" style="text-align: center;">
+	<div class="layer2-content" style="height: 100%;">
+		<button class="btn btn-default" onClick="btnOpenLayer3()">继续弹出</button>
+		<button class="btn btn-cancel" onClick="btnCloseAll()">全部关闭</button>
+		<p>layer2</p>
+	</div>
+</div>
+
+<div class="layer3 hide" style="text-align: center;">
+	<div class="layer3-content" style="height: 100%;">
+		<button class="btn btn-cancel" onClick="btnCloseAll()">全部关闭</button>
+		<p>layer3</p>
+	</div>
+</div>
+<script>
+
+layui.use('layer', function(){ 
+  	var $ = layui.jquery, layer = layui.layer; 
+  
+//  	触发事件
+	var active = {
+    	set1: function(){
+    		var that = this;
+      		layer.open({
+		  		type: 1,//不显示按钮
+		      	title: '多层弹框',
+		      	area: ['500px', '500px'],
+		     	content: $('.layer1').html()
+		    });
+	    }
+	};
+
+	$('.btnBox button').on('click', function(){
+		var othis = $(this), method = othis.data('method');
+		active[method] ? active[method].call(this, othis) : '';
+    });
+});
+function btnOpenLayer2(){
+	layer.open({
+  		type: 1,//不显示按钮
+      	title: '多层弹框',
+      	shadeClose: true,
+      	shade: 0,
+      	area: ['600px', '600px'],
+     	content: $('.layer2').html()
+   });
+}
+function btnOpenLayer3(){
+	layer.open({
+  		type: 1,//不显示按钮
+      	title: '多层弹框',
+      	shadeClose: true,
+      	shade: 0,
+      	area: ['400px', '400px'],
+     	content: $('.layer3').html()
+   });
+}
+function btnCloseAll(){
+	layer.closeAll();
+}
+</script>
+</body>
+</html>

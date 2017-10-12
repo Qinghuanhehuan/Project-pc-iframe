@@ -1,0 +1,134 @@
+//弹性布局
+  .df{
+    display: flex;
+  }
+  
+   //从下至上排列
+  .fdr{
+    flex-direction: row;
+  }
+  //从上至上排列
+  .fdrr{
+    flex-direction: row-reverse;
+  }
+  //从做到右排列
+  .fdc{
+    flex-direction: column;
+  }
+  //从右到左排列
+  .fdcr{
+    flex-direction: column-reverse;
+  }
+  
+  
+  //两端对齐
+  .jcsb{
+    justify-content:space-between;
+  }
+  //元素水平居中
+  .jcc{
+    justify-content: center;
+  }
+   //左对齐
+  .jcfs{
+    justify-content:flex-start;
+  }
+  //右对齐
+  .jcfe{
+    justify-content:flex-end;
+  }
+  //水平元素间隔相等对齐
+  .jcsa {
+    justify-content:space-around;
+  }
+  
+  //垂直居中对齐
+  .aic{
+    align-items: center;
+  }
+  //顶对齐
+  .aifs{
+    align-items: flex-start;
+  }
+  //底对齐
+  .aife{
+    align-items: flex-end;
+  }
+  //所有item第一行文字底部基线对齐
+  .aib{
+    align-items: baseline;
+  }
+  //垂直占满整个容器高度
+  .ais{
+    align-items: stretch;
+  }
+  
+  
+  //可以换行
+  .fww{
+    flex-wrap: wrap;
+  }
+  //不可以换行
+  .fwn{
+    flex-wrap: nowrap;
+  }
+  //反向换行
+  .fwwr{
+    flex-wrap: wrap-reverse;
+  }
+  
+  
+  
+  
+  
+  //行内元素
+  .dif{
+    display: inline-flex;
+  }
+  
+  
+  //水平换行
+  .ffrw{
+    flex-flow: wrap;
+  }
+  //水平不换行
+  .ffrn{
+    flex-flow:row nowrap;
+  }
+  //水平反向换行
+  .ffrwr{
+    flex-flow:row wrap-reverse;
+  }
+  //纵向反向换行
+  .ffcwr{
+    flex-flow:column wrap-reverse;
+  }
+  
+  
+  //第一象限对齐
+  .acfs{
+    align-content: flex-start;
+  }
+  //第四象限对齐
+  .acfe{
+    align-content: flex-end;
+  }
+  //item位于容器中心
+  .acc{
+    align-content: center;
+  }
+  //垂直占满真个容器高度
+  .acs{
+    align-content: stretch;
+  }
+  //垂直两端对齐
+  .acsb{
+    align-content: space-between;
+  }
+  //垂直元素间隔相等对齐
+  .acsa{
+    align-content: space-around;
+  }
+  
+  
+  

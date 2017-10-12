@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.list-select{
+	width: 520px;
+	border: 1px solid #adadad;
+	border-radius: 3px;
+	margin: 10px auto;
+	background: rgba(255, 255, 255, 0.8);
+	-webkit-user-select: none; /* Chrome all / Safari all */
+	-moz-user-select: none; /* Firefox all */
+	-ms-user-select: none; /* IE 10+ */</
+	-o-user-select: none;
+	user-select: none;
+}
+/*-------标题样式------*/
+.list-select .list-title{
+	width: 510px;
+	height: 56px;
+	line-height: 56px;
+	padding-left: 10px;
+	/* border-bottom: 1px solid #adadad; */
+	cursor: move;
+	background-color: #00ab84;
+}
+/*-------列表主体样式--------*/
+.list-select .list-body{
+	width: 100%;
+}
+.list-body > div{
+	display: inline-block;
+	height: 300px;
+	overflow: auto;
+}
+.list-body .left-box, .list-body .right-box{
+	width: 200px;
+	border-radius: 3px;
+	margin: 10px 10px;
+	background: #e8f6e6;
+}
+.list-body .center-box{
+	width: 65px;
+}
+
+/*-------列表项样式-------*/
+.list-body .item{
+	display: block;
+	text-align: left;
+	padding-left: 10px;
+}
+.list-body .item:hover{
+	background: #f2fbf1;
+	cursor: pointer;
+}
+/*-------被选中的列表项--------*/
+.list-body .item-box .selected-item{
+	background: #f2fbf1;
+}
+
+/*------中间选择按钮样式-------*/
+.list-body .center-box > button{
+	display: block;
+	color: #434343;
+	width: 50px;
+	height: 30px;
+	font-size: 14px;
+	border-radius: 2px;
+	margin: 25px auto;
+	border: none;
+}
+/*.list-body .center-box > button:hover{
+	background: #e7e7e7;
+    border-color: #ccc;
+    cursor: pointer;
+}*/
+/*------面板底部样式----------*/
+.list-select .list-footer{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.list-footer > button{
+	display: block;
+	color: #434343;
+	width: 80px;
+	height: 30px;
+	background: #fff;
+	font-size: 14px;
+	border: none;
+	border-radius: 2px;
+	margin: 5px auto;
+	background-color: #00ab84;
+	color: #fff;
+	cursor:pointer;
+}
+
+.biref{
+	font-size: 12px;
+	border-bottom:1px dashed #333;
+	overflow: hidden;
+	padding:15px;
+	margin-bottom: 15px;
+}
+.biref p{
+	float: left;
+}
+.biref p span{
+	margin-right:15px;
+}
+.list-title h4{
+	text-align: center;
+	font-weight:normal;
+	color: #fff;
+	height: 56px;
+}
+.add-one{
+	background: url(../images/direction2.png) no-repeat center;
+}
+.add-all{
+	background: url(../images/direction4.png) no-repeat center;
+}
+.remove-one{
+	background: url(../images/direction1.png) no-repeat center;
+}
+.remove-all{
+	background: url(../images/direction3.png) no-repeat center;
+}
+.item-box span{
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+}
+.subtitle{
+	overflow: hidden;
+}
+.subtitle .lt{
+	float: left;
+	width: 280px;
+	margin-left:15px;
+}
+.subtitle .rt{
+	float: left;
+	margin-left:10px;
+}
+.item-box ul{
+list-style: none;
+padding:0;
+margin:0;
+}
+.item-box ul li{
+	
+	float: left;
+    padding: 0;
+    margin: 0;
+    min-width: 44px;
+    text-align: center;
+	border: 1px solid #c3c3c3;
+	border-left:none;
+	margin-top: -1px;
+}
+.item-box ul li:first-child{
+	border-left: 1px solid #c3c3c3;
+}
+.item-box .item:first-child{
+	margin-top:15px;
+}

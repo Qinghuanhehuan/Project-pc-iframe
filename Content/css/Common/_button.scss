@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* 默认按钮样式 */
+.btn {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-left: 10px;
+  margin-bottom: 0;
+  border-radius: 4px;
+  padding: 0 18px;
+  width: auto;
+  height: 26px;
+  line-height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #fff !important;
+  outline: none; 
+  min-width: 90px;
+    box-sizing: border-box;
+    opacity:.9;
+    filter:alpha(opacity=90);
+}
+.btn:hover {
+    opacity:.8;
+    filter:alpha(opacity=80);
+}
+
+/*默认*/
+.btn-default,
+.btn-default:visited {
+  background-color: #00ab84; }
+
+.btn-default:active {
+  background-color: #1a8c6a; }
+
+.btn-default:hover {
+  background-color: #00ab84;
+  border-color: #1a8c6a; }
+
+.btn-default[disabled] {
+  background-color: #00ab84;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed; }
+
+/* 主要 */
+.btn-primary,
+.btn-primary:visited {
+  background-color: #f18d00; }
+
+.btn-primary:active {
+  background-color: #e56700; }
+
+.btn-primary:hover {
+  background-color: #f18d00;
+  border-color: #e56700; }
+
+.btn-primary[disabled] {
+  background-color: #f18d00;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed; }
+
+/* 灰色按钮：取消，关闭，无效 */
+.btn-cancel,
+.btn-cancel:visited {
+  background-color: #b2b2b2; }
+
+.btn-cancel:active {
+  background-color: #a0a0a0; }
+
+.btn-cancel:hover {
+  background-color: #b2b2b2;
+  border-color: #a0a0a0; }
+
+.btn-primary[disabled] {
+  background-color: #b2b2b2;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed; }
+
+/* 红色按钮：警告，删除 */
+.btn-delete,
+.btn-delete:visited {
+  border-color: transparent;
+  background-color: #ff0000; }
+
+.btn-delete:active {
+  background-color: #e50000; }
+
+.btn-delete:hover {
+  background-color: #ff0000;
+  border-color: #e50000; }
+
+.btn-delete[disabled] {
+  background-color: #ff0000;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed; }
+
+/* ==========================================================================
+   按钮组合
+   ========================================================================== */
+.btn-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin-bottom: 20px; }
+  .btn-group .btn {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .btn-group .btn:last-child {
+    margin-right: 0; }

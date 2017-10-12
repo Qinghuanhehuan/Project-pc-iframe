@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layer-基础提示框1</title>
+  <link rel="stylesheet" href="../../css/common.css"/>
+  <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  <script src="../../js/jquery-2.0.3.min.js"></script>
+  <script src="../layui/layui.js"></script>
+  <style>
+  	/*弹框内容区样式自定义*/
+  	.layer1-content{
+  		text-align: center;
+  	}
+  	.layer1-content .title{
+  		margin-bottom:8px;
+  	}
+  	.layer1-content .text{
+  		color: #999;
+  	}
+  	
+  	/*弹框内容区样式自定义*/
+  	.layer2-content{
+  		min-width: 400px;
+  		font-size: 12px;
+  	}
+  	.layer2-content .input-item{
+  		margin-bottom: 10px;
+  	}
+  	.layer2-content .input-item:last-child{
+  		margin-bottom: 0;
+  	}
+  	.layer2-content span{
+  		text-align: right;
+  		display: inline-block;
+  		width: 150px;
+  	}
+  	.layer2-content input[type="text"],.layer2-content select {
+  		width: 200px;
+  		height: 26px;
+  	}
+  	
+  	/*弹框内容区样式自定义*/
+  	.layer3-content{
+  		text-align: left;
+  	}
+  	.layer3-content >label{
+  		display: inline-block;
+  		width: 110px;
+  		font-size: 12px;
+  	}
+  	.layer3-content >label:last-child{
+  		margin-bottom: 0;
+  	}
+  	.layer3-content >label:nth-child(3n){
+  		width: 85px;
+  	}
+  	.layer3-content >label input{
+  		margin-right: 5px;
+  	}
+  	
+  	/*弹框内容区样式自定义*/
+  	.layer4-content .profit{
+  		background: #f3dfdf;
+  		color: #b74c48;
+  	}
+  	.layer4-content .loss{
+  		background: #dff1d9;
+  		color: #589058;
+  	}
+  </style>
+</head>
+<body>
+<div class="btnBox" style="margin: 100px auto auto 100px;">
+	<button data-method="set1" class="btn btn-default">基础弹框样式1</button>
+	<button data-method="set2" class="btn btn-default">基础弹框样式2</button>
+	<button data-method="set3" class="btn btn-default">基础弹框样式3</button>
+	<button data-method="set4" class="btn btn-default">基础弹框样式4</button>
+</div>
+
+
+<!--弹框1-->
+<div class="layer1 hide">
+	<div class="layer1-content">
+		<p class="title">你确定要退出系统？</p>
+		<span class="text">如果是点击“确定”,否则点击“取消”</span>
+	</div>
+</div>
+<!--弹框内容2-->
+<div class="layer2 hide">
+	<div class="layer2-content">
+		<div class="input-item">
+			<span><b class="require red">*</b>个人抢单最大数（个数）：</span>
+			<input type="text" placeholder="请输入用户名">
+		</div>
+		<div class="input-item">
+			<span><b class="require red">*</b>完成时限（小时）：</span>
+			<input type="text" placeholder="请输入用户名">
+		</div>
+		<div class="input-item">
+			<span><b class="require red">*</b>个人延误是否抢单：</span>
+			<select>
+				<option>-- 请选择 --</option>
+				<option>-- 是 --</option>
+				<option>-- 否 --</option>
+			</select>
+		</div>
+		<div class="input-item">
+			<span><b class="require red">*</b>房间延误是否收回：</span>
+			<select>
+				<option>-- 请选择 --</option>
+				<option>-- 是 --</option>
+				<option>-- 否 --</option>
+			</select>
+		</div>
+	</div>
+</div>
+<!--弹框内容3-->
+<div class="layer3 hide">
+	<div class="layer3-content">
+		<label class="radio">访问者<input type="radio"/><i></i></label>
+		<label class="radio">造价师<input type="radio"/><i></i></label>
+		<label class="radio">图纸质控<input type="radio"/><i></i></label>
+		<label class="radio">超级管理员<input type="radio"/><i></i></label>
+		<label class="checkbox">设计主管<input type="checkbox"/><i></i></label>
+		<label class="checkbox">立面厨卫施工图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">立面房间施工图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">平面施工图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">立面框图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">平面施工图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">平面布置图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">平面框图<input type="checkbox"/><i></i></label>
+		<label class="checkbox">管理员<input type="checkbox"/><i></i></label>
+	</div>
+</div>
+
+<!--弹框内容4-->
+<div class="layer4 hide">
+	<div class="layer4-content">
+		<!--<table>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>合同金额</th>
+					<th>合同期收入</th>
+					<th>调价券总额</th>
+					<th>盈亏情况</th>
+					<th>合同签订日期</th>
+					<th>合同期限</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>￥1280.00</td>
+					<td>￥8180.00</td>
+					<td>￥1000.00</td>
+					<td class="profit">盈利￥2000.00</td>
+					<td>2015-12-22</td>
+					<td>6个月</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>￥1280.00</td>
+					<td>￥8180.00</td>
+					<td>￥1000.00</td>
+					<td class="loss">亏损￥300.00</td>
+					<td>2015-12-22</td>
+					<td>12个月</td>
+				</tr>
+			</tbody>
+		</table>-->
+		<table class="layui-table" lay-data="{url:'data.json?page=1', id:'idTest', limit:20, even:true}" lay-filter="demo">
+	  	<thead>
+	    	<tr>
+	      		<th lay-data="{width:50, templet:'#tpl-id'}">序号</th>
+		      	<th lay-data="{field:'price1', width:90}">合同金额</th>
+		      	<th lay-data="{field:'price2', width:80}">合同期收入</th>
+		      	<th lay-data="{field:'price3', width:80}">调价券总额</th>
+		      	<th lay-data="{field:'price4', width:120, templet:'#tpl-price4'}">盈亏情况</th>
+		      	<th lay-data="{field:'date', width:120}">合同签订日期</th>
+		      	<th lay-data="{field:'daterange', width:100}">合同期限</th>
+				</tr>
+	  	</thead>
+		</table>
+		<p class="table-des">1、盈亏情况=合同期收入-销售底价*合同期限；其中合同金额、调价券、销售底价都为合同期限内的。</p>
+		
+		<script type="text/html" id="tpl-price4">
+		  {{#  if(d.ifgain){ }}
+		  	<div class="profit">{{d.price4}}</div>
+		  {{#  } else { }}
+		  	<div class="loss">{{d.price4}}</div>
+		  {{#  } }}
+		</script>
+		<script type="text/html" id="tpl-id">
+		  {{d.LAY_TABLE_INDEX+1}}
+		</script>
+		
+	</div>
+</div>
+
+<script>
+	layui.use('layer', function(){ 
+  	var $ = layui.jquery, layer = layui.layer; 
+  	//触发事件
+  	var active = {
+    	set1: function(){
+	      var that = this; 
+				layer.open({
+					title:'普通提示信息',
+					content: $('.layer1').html(),
+					area: ['300px', ''], 
+					btn: ['2.1.2.1确定','2.1.2.2取消'], 
+					yes:function(index){
+						layer.close(index);
+					},
+					btn2:function(index){
+						console.log(index)
+					}
+				});
+	    },
+  		set2:function(){
+	      var that = this; 
+	    	layer.open({
+					title:'提示标题',
+					content: $('.layer2').html(),
+					area: [$(''), ''], 
+					btn: ['2.1.2.1确定'],
+					yes:function(index){
+						layer.close(index);
+					}
+				});
+	   	},
+	   	set3:function(){
+      	var that = this; 
+	   		layer.open({
+					title:'提示标题',
+					content: $('.layer3').html(),
+					area: ['404px', ''], 
+					btn: ['保存','取消'],
+					yes:function(index){
+						layer.msg('保存成功');
+						layer.close(index);
+					}
+				});
+	   	},
+	   	set4:function(){
+      	var that = this; 
+   			layer.open({
+	  			type: 1,//不显示按钮
+					title:'提示标题',
+					content: $('.layer4').html(),
+					area: [$('.layer4').width()+'', '']
+				});
+			}
+    };
+    
+  	$('.btnBox button').on('click', function(){
+    	var othis = $(this), method = othis.data('method');
+    	active[method] ? active[method].call(this, othis) : '';
+  	});
+	});
+	
+	layui.use('table', function(){
+  	var table = layui.table;
+  	table.render({ 
+  		//初始排序
+  		initSort: {
+		    field: 'id',
+		    type: 'desc' //排序方式  asc: 升序，desc: 降序，null: 默认排序
+		  },
+		  //数据渲染完毕后回调
+		  done: function(res, curr, count){
+		    //如果是异步请求数据方式，res即为你接口返回的信息。
+		    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+		    console.log(res);
+		    
+		    //得到当前页码
+		    console.log(curr); 
+		    
+		    //得到数据总量
+		    console.log(count);
+		  }
+		});
+	});
+		
+</script>
+</body>
+</html>

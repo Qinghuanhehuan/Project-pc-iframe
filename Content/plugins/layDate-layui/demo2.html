@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>开始时间-结束时间（年月日时分秒）</title>
+  	<link rel="stylesheet" href="../../css/common.css"/>
+  	<link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+  	<script src="../layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+     <div class="select-item-date"> 
+        <span>2.2.8抢单时间：</span>
+        <input type="text" class="laydate" placeholder="开始日期" id="startTime"/>
+        <em style="margin:0 5px">至</em>
+        <input type="text" class="laydate" placeholder="结束日期" id="endTime"/>
+    </div>
+          
+    <script>
+    	//日期选择
+    	layui.use('laydate', function(){
+  			var laydate = layui.laydate;
+	        laydate.render({
+	            elem: '#startTime', 
+	            type: 'datetime'
+	        });
+	        laydate.render({
+	            elem: '#endTime',
+	            type: 'datetime'
+	        });
+	    })
+    </script>
+</body>
+</html>
